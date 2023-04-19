@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ja">
+ <meta
+    http-equiv="content-type"
+    content="text/html;charset=utf-8"
+  />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Nicholas Burney</title>
+    <meta name="description" content="Aspiring Software Developer" />
+    <link rel="canonical" href="index.html" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Nicholas Burney" />
+    <meta property="og:title" content="Nicholas Burney" />
+    <meta property="og:description" content="Aspiring Software Developer" />
+    <meta property="og:url" content="index.html" />
+    <meta property="og:image" content="assets/share-image.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="google" content="nositelinkssearchbox" />
+    <meta name="google" content="notranslate" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="icon" href="assets/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/favicon.png" />
+  </head>
+  <body>
+    <div id="EnterView">
+      <div class="_t1">Nicholas Burney  </div>
+      <div class="_t2">Portfolio</div>
+    </div>
+    <div id="Page">
+      <div id="Background"><canvas data-engine="three.js r150" width="2207" height="695" style="width: 1471.69px; height: 463.688px;"></canvas></div>
+      <div class="mask" id="Mask">
+        <div class="mask_top"></div>
+        <div class="mask_bottom"></div>
+      </div>
+      <div class="frame" id="Frame">
+        <div class="frame_line frame_line-left"></div>
+        <div class="frame_line frame_line-right"></div>
+        <div class="frame_line frame_line-top"></div>
+        <div class="frame_line frame_line-bottom"></div>
+      </div>
+      <div class="theme" id="Theme" x-data @click="$store.ui.toggleTheme()">
+        <div
+          class="theme_color"
+          :class="{ 'is-selected': $store.ui.theme === 'light' }"
+        >
+          <div class="_box"></div>
+          <div class="_text">Light</div>
+        </div>
+        <div
+          class="theme_color"
+          :class="{ 'is-selected': $store.ui.theme === 'dark' }"
+        >
+          <div class="_box"></div>
+          <div class="_text">Dark</div>
+        </div>
+      </div>
+      <header class="siteHeader" id="SiteHeader">
+        <h1 class="siteHeader_title">Nicholas Burney</h1>
+        <p class="siteHeader_label">Aspiring Software Developer</p>
+        <nav class="siteHeader_nav" x-data>
+          <ol>
+            <li :class="{ 'is-selected': $store.ui.currentPath === '/' }">
+              <div class="_dot">></div>
+              <a class="_text" href="/">Home</a>
+            </li>
+            <li
+              :class="{ 'is-selected': $store.ui.currentPath === '/projects/' }"
+            >
+              <div class="_dot">></div>
+              <a class="_text" href="/projects/">Projects</a>
+            </li>
+            <li :class="{ 'is-selected': $store.ui.currentPath === '/info/' }">
+              <div class="_dot">></div>
+              <a class="_text" href="/info/">Info</a>
+            </li>
+            <li
+              :class="{ 'is-selected': $store.ui.currentPath === '/contact/' }"
+            >
+              <div class="_dot">></div>
+              <a class="_text" href="/contact/">Contact</a>
+            </li>
+            <li :class="{ 'is-selected': $store.ui.currentPath === '/resume/' }">
+              <div class="_dot">></div>
+              <a class="_text" download="sye.jpeg" href="/assets/sye_logo.jpeg" >Resume</a>
+            </li>
+          </ol>
+        </nav>
+      </header>
+      <main class="content" id="Content" data-scroll="area">
+        <div class="content_inner" data-scroll="target">
+          <section class="page" data-page="home">
+            <div class="page_content home">
+                <p class="project_header">Check out my most recent project!</p>
+                <div class="current_project">
+                    <img src="assets/sye_logo.jpeg" />
+                    <div class="current_project__description">
+                        <h3 class="current_project__description__title">Share Your World</h3>
+                        <div class="desc__holder">
+                          <p>React application created for the<br>Google Maps Platform Hackathon.</p>
+                          <div class="social-icon">
+                          <a href="https://devpost.com/software/share-your-world"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 64 64" width="25" height="25" style="enable-background:new 0 0 64 64;margin-right: 3px;" xml:space="preserve">
+                            <g>
+                              <g>
+                                <path class="st0" d="M48.7,4.8H15.3L0,32l15.7,27.2h33.1L64,32L48.7,4.8z"></path>
+                              </g>
+                              <path class="st1" d="M32.2,16.9H21.4v30.3h10.8c8.2,0,14.9-6.8,14.9-15.1S40.5,16.9,32.2,16.9z M32,41.1h-4.5V22.9H32
+                                c5,0,9.1,4.1,9.1,9.1S37,41.1,32,41.1z"></path>
+                            </g>
+                            </svg></a>
+                         <a href="https://github.com/digitalartcrew/share-your-world"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path style="fill: white" d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg></a>
+                         </div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+          </section>
+          <section class="page" data-page="projects">
+            <div class="page_content project">
+              <div class="project_section">
+                <h2 class="project_heading">
+                  &#x25a0; BUSINESS
+                </h2>
+                <div class="project_list">
+                  <a
+                    class="project_item text-btn"
+                    href="https://midnight-grand-orchestra.jp/overture-bluray-dvd/"
+                    target="_blank"
+                    rel="noopener"
+                    ><div class="project_title">SHARE YOUR WORLD</div>
+                    <div class="project_info">
+                      2022
+                    </div></a
+                  ><a
+                    class="project_item text-btn"
+                    href="https://punchred.xyz/"
+                    target="_blank"
+                    rel="noopener"
+                    ><div class="project_title">VGARAGE</div>
+                    <div class="project_info">
+                      2022 / ONGOING
+                    </div></a
+                  ><a
+                    class="project_item text-btn"
+                    href="https://revenge-pop.mikapikazo.info/"
+                    target="_blank"
+                    rel="noopener"
+                    ><div class="project_title">RUNSMITH</div>
+                    <div class="project_info">
+                      2022 / ONGOING
+                    </div></a
+                  >
+                </div>
+              </div>
+              <div class="project_section">
+                <h2 class="project_heading">
+                  &#x25a0; CREATIVE
+                </h2>
+                <div class="project_list">
+                  <a
+                    class="project_item text-btn"
+                    href="https://vixi-vixi.jp/"
+                    target="_blank"
+                    rel="noopener"
+                    ><div class="project_title">TIC TAC TOE</div>
+                    <div class="project_info">
+                      2021 / Commission / Portfolio
+                    </div></a
+                  ><a
+                    class="project_item text-btn"
+                    href="https://signif.jp/"
+                    target="_blank"
+                    rel="noopener"
+                    ><div class="project_title">CALCULATOR</div>
+                    <div class="project_info">
+                      2020 / Commission / Portfolio
+                    </div></a
+                  ><a
+                    class="project_item text-btn"
+                    href="https://nanameinc.jp/"
+                    target="_blank"
+                    rel="noopener"
+                    ><div class="project_title">naname</div>
+                    <div class="project_info">
+                      2020 / Commission / Portfolio
+                    </div></a
+                  >
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="page" data-page="info">
+            <div class="page_content info">
+              <div class="info_item info_item-1">
+                <div class="info_content">
+                  <ul>
+                    <li>
+                      <a
+                        class="text-btn"
+                        href="https://twitter.com/P5_keita"
+                        target="_blank"
+                        rel="noopener"
+                        >Twitter ↗</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-btn"
+                        href="https://www.instagram.com/p5aholic/"
+                        target="_blank"
+                        rel="noopener"
+                        >Instagram ↗</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="info_item info_item-2">
+                <div class="info_content">
+                  <ul>
+                    <li>
+                      <a
+                        class="text-btn"
+                        href="https://experiments.p5aholic.me/"
+                        target="_blank"
+                        rel="noopener"
+                        >experiments.p5aholic.me ↗</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-btn"
+                        href="https://playground.p5aholic.me/"
+                        target="_blank"
+                        rel="noopener"
+                        >playground.p5aholic.me ↗</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="info_item info_item-3">
+                <div class="info_content">
+                  <ul>
+                    <li>
+                      <span class="is-light"
+                        >Awwwards Independent of the Year<br /></span
+                      ><span>2020 Nominee</span>
+                    </li>
+                    <li>
+                      <span class="is-light"
+                        >Awwwards Site of the Day<br /></span
+                      ><span>Web Graphic Experiments</span>
+                    </li>
+                    <li>
+                      <span class="is-light"
+                        >Awwwards Site of the Day<br /></span
+                      ><span>100 DAYS OF POETRY</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="page" data-page="contact">
+            <div class="page_content contact">
+              <div class="contact_wrap">
+                <a
+                  class="contact_text jp text-btn"
+                  href="https://p5aholic.notion.site/p5aholic/Web-aac658c501b8458080dcc19e5ff26e51"
+                  target="_blank"
+                  rel="noopener"
+                  >制作の依頼について ↗</a
+                ><a
+                  class="contact_text en text-btn"
+                  href="https://p5aholic.notion.site/p5aholic/Contact-f7a0724e15d44eaebddbf7f09459aef4"
+                  target="_blank"
+                  rel="noopener"
+                  >Contact Form ↗</a
+                >
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
